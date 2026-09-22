@@ -10,10 +10,12 @@
 			"type": "volume"
 		},
 		{
+			"source": "venv-${devcontainerId}",
 			"target": "${containerWorkspaceFolder}/.venv",
 			"type": "volume"
 		},
 		{
+			"source": "target-${devcontainerId}",
 			"target": "${containerWorkspaceFolder}/target",
 			"type": "volume"
 		}
@@ -26,8 +28,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"charliermarsh.ruff",
-				"ms-python.python",
+				"ms-python.vscode-python-envs",
 				"rust-lang.rust-analyzer",
 				"tamasfe.even-better-toml"
 			]
